@@ -1,0 +1,15 @@
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\bin\Debug\net8.0\SyncFolderConsoleApp.exe
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\bin\Debug\net8.0\SyncFolderConsoleApp.deps.json
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\bin\Debug\net8.0\SyncFolderConsoleApp.runtimeconfig.json
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\bin\Debug\net8.0\SyncFolderConsoleApp.dll
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\bin\Debug\net8.0\SyncFolderConsoleApp.pdb
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.AssemblyInfoInputs.cache
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.AssemblyInfo.cs
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.csproj.CoreCompileInputs.cache
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.sourcelink.json
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.dll
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\refint\SyncFolderConsoleApp.dll
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.pdb
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\SyncFolderConsoleApp.genruntimeconfig.cache
+C:\GitHub\FolderSyncAppSDET\SyncFolderConsoleApp\obj\Debug\net8.0\ref\SyncFolderConsoleApp.dll
