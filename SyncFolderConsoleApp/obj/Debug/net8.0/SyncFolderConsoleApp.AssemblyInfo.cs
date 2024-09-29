@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SyncFolderConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40794a0f5c95614b221e6a5bbfbf5d6a67a7fb23")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b35f18745cfd4f07ec58f29f00865d70282c86f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SyncFolderConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SyncFolderConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
