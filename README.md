@@ -6,6 +6,7 @@ Simple .NET (C#) console app/tool that continuously syncs two folders.
 
 ## How to use
 
+#### Install .NET from microsoft
 #### First open the SyncFolderConsoleApp in cmd, then write dotnet run 'parameters'
 
 | Parameter | Type     | Description                |
