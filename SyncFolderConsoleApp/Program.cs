@@ -11,10 +11,10 @@ namespace Project
     {
         public static void Main(string[] args)
         {
-            const string ORIGINAL_PATH_KEY = "originalPath";
-            const string COPY_PATH_KEY = "copyPath";
+            const string ORIGINAL_PATH_KEY = "source";
+            const string COPY_PATH_KEY = "copy";
             const string INTERVAL_KEY = "interval";
-            const string LOG_PATH_KEY = "logPath";
+            const string LOG_PATH_KEY = "log";
 
             Dictionary<string, string> argsDic = new Dictionary<string, string>();
             for (int i = 0; i < args.Length; i++)
@@ -30,11 +30,11 @@ namespace Project
             string originalFolder = argsDic[ORIGINAL_PATH_KEY];
             string copyFolder = argsDic[COPY_PATH_KEY];
             int interval = GetIntFromText(argsDic[INTERVAL_KEY]);
-            string logFile = argsDic[LOG_PATH_KEY];
+            string logFilePath = argsDic[LOG_PATH_KEY];
 
             foreach (KeyValuePair<string, string> entry in argsDic)
             {
-                Console.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
+                LogHelper($"Key: {entry.Key}, Value: {entry.Value}");
             }
 
             while (true)
@@ -50,11 +50,32 @@ namespace Project
 
             void SyncFolders()
             {
-                Console.WriteLine($"Synq!");
+                Console.WriteLine($"|---Synq---|");
                 CopyDirectory(originalFolder, copyFolder);
             }
 
-            static void CopyDirectory(string sourceDir, string destinationDir)
+            void LogHelper(string message)
+            {
+                // TODO: Check if the log file exists, if not, create it
+                var logFile = new FileInfo(logFilePath);
+                if (!logFile.Exists)
+                {
+                    File.CreateText(logFilePath);
+                    logFile = new FileInfo(logFilePath);
+                    LogHelper($"Log file {logFile.Name} doesn't exist, let's create it!");
+                }
+                // TODO: Write the message to the log file
+                using (StreamWriter outputFile = new StreamWriter(logFilePath, true))
+                {
+                    outputFile.WriteLine(message);
+                    outputFile.Close();
+                }
+
+                // Write the message to the console
+                Console.WriteLine(message);
+            }
+
+            void CopyDirectory(string sourceDir, string destinationDir)
             {
                 // Get information about the source directory
                 var dir = new DirectoryInfo(sourceDir);
@@ -69,7 +90,7 @@ namespace Project
                 // Create the destination directory
                 if (!newDir.Exists)
                 {
-                    Console.WriteLine($"{destinationDir} doesn't exist! Let's create it!");
+                    LogHelper($"Directory {destinationDir} added!!");
                     Directory.CreateDirectory(destinationDir);
                 }
 
@@ -94,9 +115,8 @@ namespace Project
                     }
                     else
                     {
-
                         file.CopyTo(targetFilePath);
-                        Console.WriteLine($"File {file.Name} added!");
+                        LogHelper($"File {file.Name} added!");
                     }
                 }
 
@@ -106,7 +126,7 @@ namespace Project
                     if (!File.Exists(targetFilePath))
                     {
                         file.Delete();
-                        Console.WriteLine($"File {file.Name} deleted!");
+                        LogHelper($"File {file.Name} deleted!");
                     }
                 }
 
@@ -122,7 +142,7 @@ namespace Project
                     if (!Directory.Exists(newDestinationDir))
                     {
                         subDir.Delete();
-                        Console.WriteLine($"Directory {subDir.Name} deleted!");
+                        LogHelper($"Directory {subDir.Name} deleted!");
                     }
                 }
             }
