@@ -34,7 +34,7 @@ namespace Project
 
             foreach (KeyValuePair<string, string> entry in argsDic)
             {
-                LogHelper($"Key: {entry.Key}, Value: {entry.Value}");
+                Console.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
             }
 
             while (true)
@@ -60,10 +60,12 @@ namespace Project
                 var logFile = new FileInfo(logFilePath);
                 if (!logFile.Exists)
                 {
-                    File.CreateText(logFilePath);
+                    var createdLog = File.CreateText(logFilePath);
+                    createdLog.Close();
                     logFile = new FileInfo(logFilePath);
                     LogHelper($"Log file {logFile.Name} doesn't exist, let's create it!");
                 }
+
                 // TODO: Write the message to the log file
                 using (StreamWriter outputFile = new StreamWriter(logFilePath, true))
                 {
